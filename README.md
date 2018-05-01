@@ -28,6 +28,7 @@ Install the project...
 -- Install configuration: ""
 -- Installing: /tmp/install/bin/empty-argv-segfault-check
 -- Installing: /tmp/install/bin/segfault_detect.sh
+-- Installing: /tmp/install/bin/find-executables.sh
 ubuntu@laptop:/tmp/build$ 
 ```
 
