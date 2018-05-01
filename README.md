@@ -34,7 +34,7 @@ ubuntu@laptop:/tmp/build$
 
 ## Usage
 
-### Find all executables on the file system
+### Find all executables
 
 ```
 ubuntu@laptop:/tmp$ /tmp/install/bin/find-executables.sh > /tmp/all.txt
@@ -42,7 +42,7 @@ ubuntu@laptop:/tmp$ /tmp/install/bin/find-executables.sh > /tmp/all.txt
 ubuntu@laptop:/tmp$ 
 ```
 
-### Find all setuid executables on the file system
+### Find all setuid executables
 
 ```
 ubuntu@laptop:/tmp$ /tmp/install/bin/find-executables.sh setuid > /tmp/all-setuid.txt
