@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -u
 
 resultfile=`mktemp --suffix .txt /tmp/result.XXXXX`
