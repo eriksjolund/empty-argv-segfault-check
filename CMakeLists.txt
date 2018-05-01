@@ -10,6 +10,13 @@ configure_file(segfault_detect.sh.cmake segfault_detect.sh @ONLY)
 install(FILES
             ${CMAKE_CURRENT_BINARY_DIR}/segfault_detect.sh
             find-executables.sh
+        PERMISSIONS
+            OWNER_READ
+            OWNER_EXECUTE
+            GROUP_READ
+            GROUP_EXECUTE
+            WORLD_READ
+            WORLD_EXECUTE
         DESTINATION
             bin)
 
