@@ -34,7 +34,7 @@ ubuntu@laptop:/tmp/build$
 
 ## Usage
 
-### Find all exectuables in the file system
+### Find all executables on the file system
 
 ```
 ubuntu@laptop:/tmp$ /tmp/install/bin/find-executables.sh > /tmp/all.txt
@@ -42,7 +42,7 @@ ubuntu@laptop:/tmp$ /tmp/install/bin/find-executables.sh > /tmp/all.txt
 ubuntu@laptop:/tmp$ 
 ```
 
-### Find all setuid exectuables in the file system
+### Find all setuid executables on the file system
 
 ```
 ubuntu@laptop:/tmp$ /tmp/install/bin/find-executables.sh setuid > /tmp/all-setuid.txt
@@ -60,7 +60,7 @@ on a separate test user account or even better on a virtual machine.
 test@laptop:/tmp$ /tmp/install/bin/segfault_detect.sh /tmp/all.txt 
 ```
 
-The result is written a temporary file in /tmp/
+The result is written to a temporary file in /tmp/
 
 ```
 test@laptop:/tmp$ ls -ltr /tmp/result.*
