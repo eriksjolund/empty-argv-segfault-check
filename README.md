@@ -1,2 +1,33 @@
 # empty-argv-segfault-check
 Test if an executable segfaults when started with an empty argv
+
+
+## Installation
+
+```
+ubuntu@laptop:~$ mkdir /tmp/build
+ubuntu@laptop:~$ mkdir /tmp/install
+ubuntu@laptop:~$ cd /tmp/build
+ubuntu@laptop:/tmp/build$ cmake -DCMAKE_INSTALL_PREFIX=/tmp/install ~/empty-argv-segfault-check/ && make && make install
+-- The CXX compiler identification is GNU 7.2.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/build
+Scanning dependencies of target empty-argv-segfault-check
+[ 50%] Building CXX object CMakeFiles/empty-argv-segfault-check.dir/main.cc.o
+[100%] Linking CXX executable empty-argv-segfault-check
+[100%] Built target empty-argv-segfault-check
+[100%] Built target empty-argv-segfault-check
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/install/bin/empty-argv-segfault-check
+-- Installing: /tmp/install/bin/segfault_detect.sh
+ubuntu@laptop:/tmp/build$ 
+```
+
