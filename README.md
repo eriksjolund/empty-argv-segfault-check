@@ -32,3 +32,45 @@ Install the project...
 ubuntu@laptop:/tmp/build$ 
 ```
 
+## Usage
+
+### Find all exectuables in the file system
+
+```
+ubuntu@laptop:/tmp$ /tmp/install/bin/find-executables.sh > /tmp/all.txt
+[sudo] password for ubuntu: 
+ubuntu@laptop:/tmp$ 
+```
+
+### Find all setuid exectuables in the file system
+
+```
+ubuntu@laptop:/tmp$ /tmp/install/bin/find-executables.sh setuid > /tmp/all-setuid.txt
+[sudo] password for ubuntu: 
+ubuntu@laptop:/tmp$ 
+```
+
+### Starting executables with an empty argv and see if they segfaults
+
+Note, starting executables might have side effects. If you want to start
+all the executables found on the system you better do this
+on a separate test user account or even better on a virtual machine.
+
+```
+test@laptop:/tmp$ /tmp/install/bin/segfault_detect.sh /tmp/all.txt 
+```
+
+The result is written a temporary file in /tmp/
+
+```
+test@laptop:/tmp$ ls -ltr /tmp/result.*
+/tmp/result.3otWy.txt
+```
+To list the executables that segfaulted:
+
+```
+test@laptop:/tmp$ cat /tmp/result.3otWy.txt
+/usr/bin/prog1
+/usr/bin/prog2
+/usr/bin/prog3
+```
