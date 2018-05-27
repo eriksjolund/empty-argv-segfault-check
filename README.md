@@ -103,3 +103,8 @@ of the highest code quality. They may contain other bugs.
 
 Discussion: https://github.com/eriksjolund/empty-argv-segfault-check/issues/3
 
+### Are there normal circumstances where argv[0] isn't the name of the program being run?
+
+This question has an answer at Stackoverflow: [When can argv[0] have null?](https://stackoverflow.com/questions/2794150/when-can-argv0-have-null/2794171#2794171)
+
+
