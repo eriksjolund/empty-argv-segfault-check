@@ -74,3 +74,32 @@ test@laptop:/tmp$ cat /tmp/result.3otWy.txt
 /usr/bin/prog2
 /usr/bin/prog3
 ```
+
+## FAQ
+
+### Why does some executables segfault when started with an empty argument list?
+
+When argc is 0, argv[0] is NULL. Probably, the most common cause of the segfault is the dereferencing of argv[0].
+A lot of programs falsely assume that argv[0] contains the program name without verifying that argc is not equal to 0.
+
+```C++
+main(int argc, char *argv[]) {
+  if (argc != 2) {
+    fprintf(stderr, "Usage: %s filepath\n", argv[0]);
+    exit(1);
+  }
+```
+
+Discussion: https://github.com/eriksjolund/empty-argv-segfault-check/issues/2
+
+### Can vulnerabilities be found with empty-argv-segfault-check?
+
+Probably not, as the program will just end directly when the null pointer is derefenced.
+The interesting case regarding security is finding segfaulting executables that have the setuid bit set.
+Such executables run under a different User ID than the one of the user who launched it.
+
+At least empty-argv-segfault-check could be used to find setuid executables that are not
+of the highest code quality. They may contain other bugs.
+
+Discussion: https://github.com/eriksjolund/empty-argv-segfault-check/issues/3
+
