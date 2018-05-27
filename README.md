@@ -94,7 +94,7 @@ Discussion: https://github.com/eriksjolund/empty-argv-segfault-check/issues/2
 
 ### Can vulnerabilities be found with empty-argv-segfault-check?
 
-Probably not, as the program will just end directly when the null pointer is derefenced.
+Probably not, as the program will just end directly when the null pointer is dereferenced.
 The interesting case regarding security is finding segfaulting executables that have the setuid bit set.
 Such executables run under a different User ID than the one of the user who launched it.
 
