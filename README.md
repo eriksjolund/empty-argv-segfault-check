@@ -1,5 +1,5 @@
 # empty-argv-segfault-check
-Test if an executable segfaults when started with an empty argv
+Test if an executable segfaults when started with an empty argv. The script may be used as a vulnerability-scanner to find setuid executables having buggy code (but it will probably not find any direct security vulnerabilities).
 
 
 ## Installation
